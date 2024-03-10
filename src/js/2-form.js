@@ -1,14 +1,23 @@
-const form = document.querySelector(".feedback-form");
-const localStorageKey = "feedback-form-state";
+const feedbackForm = document.querySelector('.feedback-form');
 
-form.elements.message.value = localStorage.getItem(localStorageKey) ?? "";
+const emailInput = feedbackForm.querySelector('input');
+const messageTextarea = feedbackForm.querySelector('textarea');
 
-form.addEventListener("input", (evt) => {
-  localStorage.setItem(localStorageKey, evt.target.value);
+const savedData = JSON.parse(localStorage.getItem('feedback-form-state')) || {};
+
+emailInput.value = savedData.email || '';
+messageTextarea.value = savedData.message || '';
+
+feedbackForm.addEventListener('input', () => {
+  const dataSave = {
+    email: emailInput.value,
+    message: messageTextarea.value,
+  };
+  localStorage.setItem('feedback-form-state', JSON.stringify(dataSave));
 });
 
-form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  localStorage.removeItem(localStorageKey);
-  form.reset();
+feedbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  localStorage.removeItem('feedback-form-state');
+  console.log('Збережено :', dataToSave);
 });
