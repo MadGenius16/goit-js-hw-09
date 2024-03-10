@@ -1,0 +1,103 @@
+body {
+  color: #2E2F42;
+  background: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}
+
+.feedback-form {
+  width: 408px;
+  height: 296px;
+  padding: 24px;
+}
+
+.review-form-label{
+  font-family: 'Montserrat', sans-serif;
+  color: #2E2F42;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  display: block;
+  line-height: 1.5;
+}
+
+.review-form-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  background-color: transparent;
+  padding: 0px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+}
+
+
+.review-form-input:focus {
+  border-color: #000000;
+}
+
+.review-form-textarea-comment {
+  font-family: 'Montserrat', sans-serif;
+  height: 80px;
+  width: 360px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  background-color: transparent;
+  padding: 8px 16px;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 0px sold transparent;
+  color: #2E2F42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  outline: transparent;
+}
+
+.review-form-textarea-comment::placeholder {
+  color: rgba(46, 47, 66, 0.40);
+}
+
+.review-form-textarea-comment:focus {
+  border-color: #000000;
+}
+
+.review-form-label{
+  font-family: 'Montserrat', sans-serif;
+  color: #2E2F42;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  display: block;
+  line-height: 1.5;
+}
+
+.review-form-btn {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background-color: #4D5AE5;
+  min-width: 95px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.review-form-btn:hover,
+.review-form-btn:focus {
+  background-color: #6C8CFF;
+  ;}
