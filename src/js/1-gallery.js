@@ -71,10 +71,7 @@ const images = [
   container.innerHTML = createMarkup(images);
   let lightbox = new SimpleLightbox('.gallery a',{
     captionsData:'alt', captionDelay: 250
-  } );
-
-
-
+  });
 
   function createMarkup(arr) {
     return arr.map(({preview, original, description })=>`
