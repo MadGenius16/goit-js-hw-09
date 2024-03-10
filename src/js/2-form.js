@@ -1,8 +1,8 @@
 const feedbackForm = document.querySelector('.feedback-form');
 
-const emailInput = feedbackForm.querySelector('input');
-const messageTextarea = feedbackForm.querySelector('textarea');
-
+const emailInput = document.querySelector('input');
+const messageTextarea = document.querySelector('textarea');
+const localStorageKey = 'feedback-form-state';
 const savedData = JSON.parse(localStorage.getItem('feedback-form-state')) || {};
 
 emailInput.value = savedData.email || '';
@@ -18,6 +18,6 @@ feedbackForm.addEventListener('input', () => {
 
 feedbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  localStorage.removeItem('feedback-form-state');
-  console.log('Збережено :', dataToSave);
+  localStorage.removeItem('localStorageKey');
+  feedbackForm.reset();
 });
