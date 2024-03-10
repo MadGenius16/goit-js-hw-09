@@ -20,4 +20,5 @@ feedbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
   localStorage.removeItem('localStorageKey');
   feedbackForm.reset();
-});
+  console.log('Збережено дані:', savedData);
+})
