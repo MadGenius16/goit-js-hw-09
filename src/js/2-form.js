@@ -19,8 +19,8 @@ feedbackForm.addEventListener('input', () => {
 feedbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
   localStorage.removeItem(localStorageKey);
-  console.log(event.target.elements.email.value);
-  console.log(event.target.elements.message.value);
+  console.log(`email: ${event.target.elements.email.value}`);
+  console.log(`message: ${event.target.elements.message.value}`);
   feedbackForm.reset();
 
 })
