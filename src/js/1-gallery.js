@@ -69,7 +69,7 @@ const images = [
 
   const container = document.querySelector('.gallery');
   container.innerHTML = createMarkup(images);
-  let lightbox = new SimpleLightbox('.gallery a',{
+  const lightbox = new SimpleLightbox('.gallery a',{
     captionsData:'alt', captionDelay: 250
   });
 
