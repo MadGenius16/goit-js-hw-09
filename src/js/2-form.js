@@ -3,24 +3,25 @@ const feedbackForm = document.querySelector('.feedback-form');
 const emailInput = document.querySelector('input');
 const messageTextarea = document.querySelector('textarea');
 const localStorageKey = 'feedback-form-state';
-const savedData = JSON.parse(localStorage.getItem(localStorageKey)) || {};
+const formData = JSON.parse(localStorage.getItem(localStorageKey)) || {};
 
-emailInput.value = savedData.email || '';
-messageTextarea.value = savedData.message || '';
+emailInput.value = formData.email || '';
+messageTextarea.value = formData.message || '';
 
 feedbackForm.addEventListener('input', () => {
-  const dataSave = {
+  const formData = {
     email: emailInput.value,
     message: messageTextarea.value,
   };
-  localStorage.setItem(localStorageKey, JSON.stringify(dataSave));
+  localStorage.setItem(localStorageKey, JSON.stringify(formData));
 });
 
 feedbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
   if(event.target.elements.email.value && event.target.elements.message.value ) {
-    console.log(`email: ${event.target.elements.email.value}`);
-    console.log(`message: ${event.target.elements.message.value}`);
+    // console.log(`email: ${event.target.elements.email.value}`);
+    // console.log(`message: ${event.target.elements.message.value}`);
+    console.log(formData);
     localStorage.removeItem(localStorageKey);
     feedbackForm.reset();
   } else {
@@ -28,3 +29,4 @@ feedbackForm.addEventListener('submit', (event) => {
   }
   
 })
+
