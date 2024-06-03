@@ -18,10 +18,10 @@ feedbackForm.addEventListener('input', () => {
 
 feedbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  if(event.target.elements.email.value && event.target.elements.message.value ) {
-    // console.log(`email: ${event.target.elements.email.value}`);
-    // console.log(`message: ${event.target.elements.message.value}`);
-    console.log(formData);
+  if(event.target.elements.email.value.trim() && event.target.elements.message.value.trim() ) {
+    console.log(`email: ${event.target.elements.email.value.trim()}`);
+    console.log(`message: ${event.target.elements.message.value.trim()}`);
+    // console.log(formData);
     localStorage.removeItem(localStorageKey);
     feedbackForm.reset();
   } else {
